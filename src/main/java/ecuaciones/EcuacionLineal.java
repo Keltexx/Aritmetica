@@ -11,11 +11,12 @@ public class EcuacionLineal {
 		this.b=b;
 	}
 	
-	public double resolver(double a, double b){
-		if(a==0) throw new IllegalArgumentException();
-		if(b==0)
-			
-		solucion=-b/a;
-		return solucion;
+	public double resolver(EcuacionLineal ecuacionLineal){
+		if(ecuacionLineal.a==0) throw new IllegalArgumentException();
+		if(ecuacionLineal.b==0)
+			ecuacionLineal.solucion=0;
+		else
+			ecuacionLineal.solucion=-b/a;
+		return ecuacionLineal.solucion;
 	}
 }
