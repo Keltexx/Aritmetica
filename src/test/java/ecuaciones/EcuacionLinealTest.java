@@ -13,15 +13,18 @@ public class EcuacionLinealTest {
 	public void terminoIndependienteCeroTest() {
 		EcuacionLineal ecuacionLineal = new EcuacionLineal(1, 0); // x + 0 = 0
 		// A partir de aquí, el código que comprueba que la solución es correcta
-		assertEquals( 0.0,ecuacionLineal.resolver(ecuacionLineal),0);
+		assertThat( ecuacionLineal.resolver(ecuacionLineal),is(0.0));
 	}
 
 	@Test
 	public void distintosDeCeroTest() {
 		EcuacionLineal ecuacionLineal = new EcuacionLineal(1, 1); // x + 1 = 0
+		
 		// A partir de aquí, el código que comprueba que la solución es correcta
+		assertThat(ecuacionLineal.resolver(ecuacionLineal),is(-ecuacionLineal.getB()/ecuacionLineal.getA()));
 
 		ecuacionLineal = new EcuacionLineal(2, 1); // 2x + 1 = 0
 		// A partir de aquí, el código que comprueba que la solución es correcta
+		assertThat(ecuacionLineal.resolver(ecuacionLineal),is(-ecuacionLineal.getB()/ecuacionLineal.getA()));
 	}
 }

@@ -11,6 +11,14 @@ public class EcuacionLineal {
 		this.b=b;
 	}
 	
+	public double getA() {
+		return a;
+	}
+	
+	public double getB() {
+		return b;
+	}
+	
 	public double resolver(EcuacionLineal ecuacionLineal){
 		if(ecuacionLineal.a==0) throw new IllegalArgumentException();
 		if(ecuacionLineal.b==0)
