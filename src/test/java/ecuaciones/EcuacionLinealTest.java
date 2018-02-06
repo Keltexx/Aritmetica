@@ -21,10 +21,10 @@ public class EcuacionLinealTest {
 		EcuacionLineal ecuacionLineal = new EcuacionLineal(1, 1); // x + 1 = 0
 		
 		// A partir de aquí, el código que comprueba que la solución es correcta
-		assertThat(ecuacionLineal.resolver(ecuacionLineal),is(-ecuacionLineal.getB()/ecuacionLineal.getA()));
+		assertThat(ecuacionLineal.resolver(ecuacionLineal),is(-1.0));
 
 		ecuacionLineal = new EcuacionLineal(2, 1); // 2x + 1 = 0
 		// A partir de aquí, el código que comprueba que la solución es correcta
-		assertThat(ecuacionLineal.resolver(ecuacionLineal),is(-ecuacionLineal.getB()/ecuacionLineal.getA()));
+		assertThat(ecuacionLineal.resolver(ecuacionLineal),is(-0.5));
 	}
 }
