@@ -23,6 +23,16 @@ class EcuacionCuadraticaTest {
 
 	}
 	
+	@Test
+	public void ecuacionErronea() {
+		try {
+			EcuacionCuadratica eC = new EcuacionCuadratica(3, -11, -4);
+			eC.resolverMasRaiz(eC);
+			
+		}catch(IllegalArgumentException e){
+			assertThat(e.getMessage(),is("Error"));
+		}
+	}
 	
 	
 }
